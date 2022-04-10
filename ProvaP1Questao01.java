@@ -38,5 +38,7 @@ public class ProvaP1Questao01
          }
       }
       while (!dividaValida);
+
+      input.close();
   }
 }
