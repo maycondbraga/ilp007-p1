@@ -1,4 +1,4 @@
-//
+//Camila
 //Maycon Douglas Braga dos Santos RM: 20200484
 
 import java.util.Scanner;
@@ -34,7 +34,8 @@ public class ProvaP1Questao01
          }
          catch (Exception ex)
          {
-            System.out.println("Erro durante a emissao da divida: " + ex.getMessage());
+            System.out.printf("Erro durante a emissao da divida: %s \n", ex.getMessage());
+            System.out.printf("Finalizando programa...");
             dividaValida = true;
          }
       }
