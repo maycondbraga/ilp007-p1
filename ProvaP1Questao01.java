@@ -35,6 +35,7 @@ public class ProvaP1Questao01
          catch (Exception ex)
          {
             System.out.println("Erro durante a emissao da divida: " + ex.getMessage());
+            dividaValida = true;
          }
       }
       while (!dividaValida);
