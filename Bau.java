@@ -2,26 +2,26 @@
 Maycon Douglas Braga dos Santos RA: 20200484 */
 
 public class Bau {
+    private double largura;
     private double altura;
-    private double peso;
     private double profundidade;
     private String cor;
     private boolean aberto;
 
-    public Bau(double peso, double altura, double profundidade) {
-        setPeso(peso);
+    public Bau(double largura, double altura, double profundidade) {
+        setLargura(largura);
         setAltura(altura);
         setProfundidade(profundidade);
-        cor ="Marrom";
-        aberto =false;
+        cor = "Marrom";
+        aberto = false;
     }
 
-    public Bau(double peso, double altura, double profundidade, String cor) {
-        setPeso(peso);
+    public Bau(double largura, double altura, double profundidade, String cor) {
+        setLargura(largura);
         setAltura(altura);
         setProfundidade(profundidade);
-        this.cor = cor;
-        aberto =false;
+        paintBau(cor);
+        aberto = false;
     }
 
     public double getAltura() {
@@ -36,16 +36,16 @@ public class Bau {
         this.altura = altura;
     }
 
-    public double getPeso() {
-        return peso;
+    public double getLargura() {
+        return largura;
     }
 
-    public void setPeso(double peso) {
-        if(peso < 0){
+    public void setLargura(double largura) {
+        if(largura < 0){
             System.out.println("O comprimento deve ser maior ou igual a 0!");
             System.exit(1);
         }
-        this.peso = peso;
+        this.largura = largura;
     }
 
     public double getProfundidade() {
@@ -77,11 +77,11 @@ public class Bau {
     }
 
     public String getAberto() {
-        return aberto ?" Sim, o Bau esta aberto":" Nao, o Bau esta fechado! ";
+        return aberto ? " Sim, o Bau esta aberto!" : " Não, o Bau esta fechado!";
     }
 
     @Override
     public String toString() {
-        return "\n\nDimensoes do bau:\nAltura: "+getAltura()+"\nComprimento: "+getPeso()+"\nLargura: "+getProfundidade()+"\nCor: "+cor+"\nEsta aberto? "+getAberto();
+        return "\n\nDimensoes do bau:\nLargura: "+getLargura()+"\nAltura: "+getAltura()+"\nProfundidade: "+getProfundidade()+"\nCor: "+cor+"\nEsta aberto? "+getAberto();
     }
 }
